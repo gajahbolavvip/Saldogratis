@@ -1,22 +1,8 @@
 
 const modal = document.getElementById("modal");
 
-const hadiah = [
-  20000,
-  30000,
-  40000,
-  50000,
-  100000
-];
-
-let selectedReward = 0;
-
 function openModal() {
   modal.classList.add("show");
-
-  document.getElementById("checkSection").style.display = "block";
-  document.getElementById("rewardSection").style.display = "none";
-  document.getElementById("message").textContent = "";
 }
 
 function closeModal() {
@@ -28,25 +14,14 @@ function checkAccount() {
   const message = document.getElementById("message");
 
   if (!userID) {
-    message.textContent = "Silakan masukkan USER ID terlebih dahulu!";
+    message.textContent = "Silakan masukkan USER ID terlebih dahulu.";
     return;
   }
 
-  // Mengacak nominal hadiah simulasi
-  const randomIndex = Math.floor(Math.random() * hadiah.length);
-  selectedReward = hadiah[randomIndex];
+  message.textContent =
+    "USER ID berhasil dimasukkan. Ini hanya simulasi tampilan, bukan konfirmasi saldo atau transfer.";
 
-  // Menampilkan nominal
-  document.getElementById("rewardAmount").textContent =
-    "Rp" + selectedReward.toLocaleString("id-ID");
-
-  // Mengubah tampilan popup
-  document.getElementById("checkSection").style.display = "none";
-  document.getElementById("rewardSection").style.display = "block";
-
-  message.textContent = "Hasil simulasi berhasil ditampilkan!";
-}
-
-function claimReward() {
-  window.location.href = "https://gajahmainbola.com/";
+  document.getElementById("spin").textContent = "0";
+  document.getElementById("konek").textContent = "0";
+  document.getElementById("hasil").textContent = "0";
 }
