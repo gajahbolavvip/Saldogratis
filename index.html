@@ -1,44 +1,110 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAJAHBOLA - SALDO GRATIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header class="header">
+    <img
+      src="https://images.linkcdn.cloud/V2/508/logo/logo-1607099285.png"
+      alt="Logo GAJAHBOLA"
+      class="logo"
+    >
+    <div class="game-label">GATES OF OLYMPUS</div>
+  </header>
+
+  <main class="panel">
+
+    <div class="sparkle">✦</div>
+
+    <h1>PROGRAM</h1>
+    <h2>SALDO GRATIS</h2>
+    <p class="subtitle">
+      DAPATKAN KESEMPATAN SALDO GRATIS SEKARANG!
+    </p>
+
+    <div class="vip-card">
+      <span>PROGRAM</span>
+      <strong>SALDO GRATIS</strong>
+    </div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <span>🎰</span>
+        <small>TOTAL SPIN</small>
+        <strong id="spin">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>⚡</span>
+        <small>TOTAL KONEK</small>
+        <strong id="konek">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>✖</span>
+        <small>PERKALIAN</small>
+        <strong>1×</strong>
+      </div>
+
+      <div class="stat">
+        <span>💰</span>
+        <small>TOTAL HASIL</small>
+        <strong id="hasil">0</strong>
+      </div>
+
+    </div>
+
+    <div class="upgrade">
+      <h3>🎁 SALDO GRATIS</h3>
+      <p>Masukkan USER ID untuk melihat simulasi program.</p>
+      <button onclick="openModal()" class="main-button">
+        KLAIM SALDO GRATIS
+      </button>
+    </div>
+
+    <div class="footer">
+      <span>© GAJAHBOLA 2026</span>
+      <span>PROGRAM SALDO GRATIS</span>
+    </div>
+
+  </main>
+</div>
+
+<!-- POPUP -->
 <div class="modal" id="modal">
   <div class="modal-content">
-
     <button class="close" onclick="closeModal()">×</button>
 
     <div class="gift">🎁</div>
     <h2>SALDO GRATIS</h2>
     <p>Masukkan USER ID kamu</p>
 
-    <div id="checkSection">
-      <input
-        type="text"
-        id="userID"
-        placeholder="Masukkan USER ID"
-        maxlength="40"
-      >
+    <input
+      type="text"
+      id="userID"
+      placeholder="Masukkan USER ID"
+      maxlength="40"
+    >
 
-      <button class="main-button" onclick="checkAccount()">
-        ✨ CEK AKUN ✨
-      </button>
-    </div>
+    <button class="main-button" onclick="checkAccount()">
+      ✨ CEK AKUN ✨
+    </button>
 
-    <div id="rewardSection" style="display:none">
-      <p>SELAMAT! HADIAH SIMULASI KAMU:</p>
-
-      <div class="reward-amount" id="rewardAmount">
-        Rp0
-      </div>
-
-      <p class="disclaimer">
-        Nominal ini merupakan hasil simulasi acak,
-        bukan saldo atau hadiah uang sungguhan.
-      </p>
-
-      <button class="main-button" onclick="claimReward()">
-        🎁 CLAIM 🎁
-      </button>
-    </div>
-
-    <p id="message" class="message"></p>
-
+    <p id="message" class="message">
+      Ini merupakan simulasi tampilan program.
+    </p>
   </div>
 </div>
+
+<script src="script.js"></script>
+</body>
+</html>
